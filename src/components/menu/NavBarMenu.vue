@@ -44,7 +44,7 @@ export default {
 
 <style>
 .NavBar_shi {
-  background-color: #fdbdd3   !important;
+  background-color: rgba(0, 255, 0, 0.29) !important;
   box-shadow: none;
   border-bottom: 1px solid #ddd;
 }
