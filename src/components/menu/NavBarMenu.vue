@@ -13,6 +13,20 @@
         <li class="nav-item mt-1">
           <b-button pill size="sm" variant="outline-secondary" v-b-toggle.sidebar-1>各項選單</b-button>
         </li>
+        <li>
+          <router-link to="/In02" >
+            <b-button
+                class="ml-2 mt-1" pill size="sm" variant="outline-secondary"
+               >快速查詢</b-button>
+          </router-link>
+        </li>
+        <li>
+          <router-link to="/In01" >
+            <b-button
+                class="ml-2 mt-1" pill size="sm" variant="outline-secondary"
+                >快速新增</b-button>
+          </router-link>
+        </li>
       </div>
 
       <div class="navbar-nav ml-auto">
@@ -44,9 +58,10 @@ export default {
 
 <style>
 .NavBar_shi {
-  background-color: rgba(0, 255, 0, 0.29) !important;
+  background-color: rgb(0, 0, 0) !important;
   box-shadow: none;
   border-bottom: 1px solid #ddd;
+
 }
 
 .TheSameFontColor {

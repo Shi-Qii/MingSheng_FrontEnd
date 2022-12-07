@@ -38,10 +38,10 @@ export default {
 
     const routerList = reactive(
         [{
-          'name': '新增收入',
+          'name': '新增工單',
           'toPath': 'In01'
         }, {
-          'name': '新增支出',
+          'name': '查詢資料',
           'toPath': 'In02'
         }])
 
