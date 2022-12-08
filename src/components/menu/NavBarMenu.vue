@@ -14,18 +14,28 @@
           <b-button pill size="sm" variant="outline-secondary" v-b-toggle.sidebar-1>各項選單</b-button>
         </li>
         <li>
-          <router-link to="/In02" >
+          <router-link to="/In02">
             <b-button
                 class="ml-2 mt-1" pill size="sm" variant="outline-secondary"
-               >快速查詢</b-button>
+            >快速查詢
+
+            </b-button>
           </router-link>
         </li>
         <li>
-          <router-link to="/In01" >
+          <router-link to="/In01">
             <b-button
                 class="ml-2 mt-1" pill size="sm" variant="outline-secondary"
-                >快速新增</b-button>
+            >快速新增
+            </b-button>
           </router-link>
+        </li>
+        <li>
+          <b-button
+              class="ml-2 mt-1" pill size="sm" variant="outline-secondary"
+              @click="test()">跟後端測試按鈕
+          </b-button>
+
         </li>
       </div>
 
@@ -51,8 +61,25 @@
 </template>
 
 <script>
+import axios from "axios";
+
 export default {
-  name: "navBarMenu"
+  name: "navBarMenu",
+  setup() {
+    const test = () => {
+      const API_URL = 'http://localhost:8070/api/auth/helloWord';
+
+      axios.get(API_URL)
+          .then((res) => {
+            console.log('res:', res);
+
+            let strs =res.status === 200?'成功':'失敗'
+            alert( strs )
+          })
+
+    }
+    return {test}
+  }
 }
 </script>
 
